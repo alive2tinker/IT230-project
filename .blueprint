@@ -1,0 +1,16 @@
+created:
+    - app/Http/Controllers/ContactController.php
+    - database/factories/ContactFactory.php
+    - database/migrations/2020_11_07_143343_create_contacts_table.php
+    - app/Contact.php
+    - database/seeds/ContactSeeder.php
+    - tests/Feature/Http/Controllers/ContactControllerTest.php
+    - app/Http/Requests/ContactStoreRequest.php
+    - resources/views/contacts/index.blade.php
+    - resources/views/contacts/create.blade.php
+updated:
+    - routes/web.php
+models:
+    Post: { title: string, contents: longText, user_id: 'unsignedBigInteger foreign' }
+    Comment: { contents: longText, user_id: 'unsignedBigInteger foreign' }
+    Contact: { name: string, email: string, message: longText }

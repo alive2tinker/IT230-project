@@ -1,0 +1,17 @@
+models:
+  Contact:
+    name: string
+    email: string
+    message: longText
+controllers:
+  Contact:
+    index:
+      query: all
+      render: contacts.index with:contacts
+    create:
+      render: contacts.create
+    store:
+      validate: name, email, message
+      save: Contact
+      redirect: contacts.thanks
+seeders: Contact
