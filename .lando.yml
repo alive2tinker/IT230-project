@@ -1,0 +1,11 @@
+name: it230-project
+recipe: laravel
+config:
+  webroot: ./public
+tooling:
+  abracadabra:
+    service: appserver
+    cmd:
+      - composer install
+      - cp .env.example .env
+      - php artisan key:generate
