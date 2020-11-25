@@ -1,0 +1,34 @@
+.slim-border{
+    border: 0.5px solid #e4e4e4;
+}
+.bg-green-gradient{
+    background: -webkit-linear-gradient(300deg, #07ac2e, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-red-gradient{
+    background: -webkit-linear-gradient(300deg, firebrick, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-blue-gradient{
+    background: -webkit-linear-gradient(300deg, deepskyblue, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.profile-img-container{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.profile-img{
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+.media{
+    background: white;
+    box-shadow: 0.5px 0.5px 2px #b1b1b1;
+    padding: 1%;
+}

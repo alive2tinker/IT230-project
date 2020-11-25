@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Post::all();
+        $posts = Post::orderby('created_at','desc')->paginate(10);
 
         return view('posts.index', compact('posts'));
     }
@@ -57,6 +57,10 @@ class PostController extends Controller
      */
     public function edit(Request $request, Post $post)
     {
+        if(Auth::user()->id !== $post->user->id)
+            return redirect()->back()->withErrors(['msg' => 'Access Denied']);
+
+
         return view('posts.edit', compact('post'));
     }
 
@@ -67,7 +71,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post->update([]);
+        $post->update($request->only('contents'));
 
         return redirect()->route('posts.show', [$post]);
     }

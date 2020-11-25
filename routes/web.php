@@ -26,5 +26,7 @@ Route::post('/posts/{post}/comments','CommentController@store');
 Route::get('/posts/{post}/comments','CommentController@index');
 Route::resource('posts', 'PostController');
 
+Route::get('/profile/{user}', 'UserController@profile')->name('profile');
+
 Route::view('/contacts/thanks','contacts.thanks')->name('contacts.thanks');
 Route::resource('contacts', 'ContactController')->only('index', 'create', 'store');

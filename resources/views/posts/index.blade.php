@@ -25,7 +25,7 @@
                         <ul class="list-unstyled m-0 d-flex justify-content-between">
                             <li>{{ $post->created_at->diffForHumans() }}</li>
                             <li>Comments: {{ count($post->comments) }}</li>
-                            @if(true)
+                            @if(\Illuminate\Support\Facades\Auth::user()->id === $post->user->id)
                             <li><a href="#" data-toggle="modal" class="text-danger" data-target="#post-{{ $post->id }}-delete-modal">Delete</a></li>
                             @endif
                         </ul>
@@ -34,7 +34,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">Modal title</h5>
+                                    <h5 class="modal-title">Delete Confirmation</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
