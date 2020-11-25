@@ -20,6 +20,10 @@ If you use the great [lando.dev](https://lando.dev/) or wish to use it with [Doc
 - install lando from their website [here](https://lando.dev)
 - after finishing the installation of lando and docker, clone the repo
 `git clone https://github.com/alive2tinker/IT230-project.git`
+-  run `cd IT230-project`
 - then start the docker container by running this command
 `lando start`
 - then run the following command in terminal `lando abracadabra` 
+
+if you need to view application information such as url and database information, just run `lando info`
+# Have fun...
